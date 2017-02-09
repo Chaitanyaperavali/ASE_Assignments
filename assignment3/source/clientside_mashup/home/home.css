@@ -1,0 +1,24 @@
+.column{
+    background: rgba(30,72,255,0.21);
+    padding:1.5%;
+    text-align: center;
+    height:80%;
+}
+#description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    /* fallback */
+}
+.row{
+    padding:2%;
+}
+#title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
