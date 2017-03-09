@@ -1,0 +1,25 @@
+<ion-view title="Sign In" id="page4"  >
+  <ion-content padding="true" style="background: url(img/wallpaper3.jpg) no-repeat center;background-size:cover;" class="has-header">
+    
+    <form id="signIn-form9" class="list">
+            
+        <h3 id="signIn-heading1" style="color:#CE4A4A;text-align:center;">Welcome</h3>
+      <label class="item item-input" id="signIn-input13">
+        <input type="text" placeholder="User Name" ng-model="LoginData.Username">
+      </label>
+      <div class="spacer" style="width: 300px; height: 15px;"></div>
+      <label class="item item-input" id="signIn-input14">
+        <input type="password" placeholder="Password" ng-model="LoginData.Password">
+      </label>
+    </form>
+    <a  ui-sref="home" id="signIn-button4" style="font-weight:600;color:#F1FAFF;" class="button button-positive  button-block">Sign In</a>
+       <div class="spacer" style="width: 300px; height: 20px;"></div>
+        <div>
+            <a href="#page6">
+                <p style="color:Red;text-align:center">
+                    <u>Not a member yet? Sign Up!</u>
+                </p>
+            </a>
+        </div>
+  </ion-content>
+</ion-view>
