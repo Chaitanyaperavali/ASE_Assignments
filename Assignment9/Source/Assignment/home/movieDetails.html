@@ -1,0 +1,64 @@
+<link href="home/home.css" rel="stylesheet">
+<div class="container-fluid" style="background-color: rgba(40,175,255,0.18); height: 100vh">
+    <nav class="navbar navbar-inverse" style="margin-bottom: 0; ">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/home">ASE3</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><input type="text" placeholder="Search Movies" style="margin-top: 3%" ng-model="searchValue"></li>
+            <li>
+                <button class="btn btn-primary btn-sm" ng-click="search()" style="margin-top: 10%">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container-fluid" style="overflow: hidden;width: 100%">
+        <div>
+            <img class="img-responsive" src={{movie.backdrop_path}}
+                 style="opacity:0.2; width: 100%;z-index: 1;position: absolute">
+        </div>
+        <div class="row" style="width: 100%">
+            <div class="col-md-4">
+                <img class="img-responsive" src={{movie.poster_path}} style="z-index: 2 ; position: relative">
+            </div>
+            <div id="table" style="display:none">
+                <div class="col-md-8 pull-right" style="z-index: 2 ; position: relative">
+                    <TABLE BORDER=2 CELLPADDING=4>
+                        <TR>
+                            <TH style="color: aliceblue; background:#12103f" COLSPAN=2>Movie Details</TH>
+                        </TR>
+                        <TR>
+                            <TD>Description:</TD>
+                            <TD id="description">{{movie.description}}</TD>
+                        </TR>
+                        <TR>
+                            <TD>Popularity</TD>
+                            <TD>{{movie.popularity}}</TD>
+                        </TR>
+                        <TR>
+                            <TD>Reviews</TD>
+                            <TD>{{movie.vote_count}}</TD>
+                        </TR>
+                        <TR>
+                            <TD>Viewer Rating</TD>
+                            <TD>{{movie.vote_average}}</TD>
+                        </TR>
+                        <TR>
+                            <TD>Sentiment of movie:</TD>
+                            <TD>Score : {{movieSentiment.score}}</TD>
+                            >
+                        </TR>
+                        <TR>
+                            <TH style="color: aliceblue; background:#1ab188" COLSPAN=2 BGCOLOR="#445553">{{movie.title}}
+                                :
+                                Based on movie Description, overall sentiment is {{movieSentiment.type}}
+                            </TH>
+                        </TR>
+                    </TABLE>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

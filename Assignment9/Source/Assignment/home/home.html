@@ -1,0 +1,40 @@
+<link href="home/home.css" rel="stylesheet">
+<div class="container-fluid" style="background-color: rgba(40,175,255,0.18); height: 100%">
+    <nav class="navbar navbar-inverse" style="margin-bottom: 0; ">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/home">ASE3</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><input type="text" placeholder="Search Movies" style="margin-top: 3%" ng-model="searchValue"></li>
+            <li>
+                <button class="btn btn-primary btn-sm" ng-click="search()" style="margin-top: 10%">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="container-fluid">
+        <div id="err_msg" style="text-align: center ;color: #86147f;margin-top: 1%"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3" ng-repeat="movie in movieDetails">
+                    <a href="#/movieDetails" ng-click = "getClickedEvent(movie.id)">
+                        <div class="column image-frame">
+                            <img class="img-responsive" src={{movie.poster_path}}>
+                        </div>
+                    </a>
+                    <div class="column">
+                        <p id="title">Title : {{movie.original_title}},
+                            ({{movie.title}}) </p>
+                        <p id="description">Description : {{movie.description}} </p>
+                        <p>Viewer Ratings : {{movie.vote_average}} </p>
+                        <p>Reviews : {{movie.vote_count}} </p>
+                        <p>Popularity : {{movie.popularity}}</p>
+                    </div>
+            </div>
+            <!--end of frames-->
+            <div>
+
+            </div>
+        </div>
+    </div>
